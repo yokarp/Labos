@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1/10/2021 11:37:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.AsignacionHasFormularioCovid" table="asignacion_has_formulario_covid" catalog="mydb" optimistic-lock="version">
+        <composite-id name="id" class="model.AsignacionHasFormularioCovidId">
+            <key-property name="asignacionIdAsignacion" type="int">
+                <column name="ASIGNACION_id_asignacion" />
+            </key-property>
+            <key-property name="formularioCovidIdFc" type="int">
+                <column name="FORMULARIO_COVID_id_fc" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

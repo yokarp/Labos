@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1/10/2021 11:37:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Carrera" table="carrera" catalog="mydb" optimistic-lock="version">
+        <id name="idCarrera" type="int">
+            <column name="id_carrera" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreCarrera" type="string">
+            <column name="nombre_carrera" length="45" />
+        </property>
+        <property name="facultad" type="string">
+            <column name="facultad" length="45" />
+        </property>
+        <property name="usuarioIdUsuario" type="int">
+            <column name="USUARIO_id_usuario" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

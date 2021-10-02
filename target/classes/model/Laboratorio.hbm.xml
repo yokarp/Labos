@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1/10/2021 11:37:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Laboratorio" table="laboratorio" catalog="mydb" optimistic-lock="version">
+        <id name="idLaboratorio" type="int">
+            <column name="id_laboratorio" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreLaboratorio" type="string">
+            <column name="nombre_laboratorio" length="45" />
+        </property>
+        <property name="descripcionLaboratorio" type="string">
+            <column name="descripcion_laboratorio" length="45" />
+        </property>
+        <property name="imagenLaboratoiol" type="string">
+            <column name="imagen_laboratoiol" length="250" />
+        </property>
+        <property name="habilitado" type="java.lang.Byte">
+            <column name="habilitado" />
+        </property>
+        <property name="horarioIdHorario" type="int">
+            <column name="HORARIO_id_horario" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
