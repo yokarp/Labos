@@ -60,9 +60,6 @@ public class Asignacion  implements java.io.Serializable {
         this.laboratorioIdLaboratorio = laboratorioIdLaboratorio;
     }
 
-
-
-
 }
 
 

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 1/10/2021 11:37:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Horario" table="horario" catalog="mydb" optimistic-lock="version">
+        <id name="idHorario" type="int">
+            <column name="id_horario" />
+            <generator class="assigned" />
+        </id>
+        <property name="horarioInicial" type="string">
+            <column name="horario_inicial" length="12" />
+        </property>
+        <property name="horarioFinal" type="string">
+            <column name="horario_final" length="12" />
+        </property>
+        <property name="diasHabilitados" type="string">
+            <column name="dias_habilitados" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
