@@ -17,8 +17,8 @@
         <property name="correo" type="string">
             <column name="correo" length="45" />
         </property>
-        <property name="contrase&#241;a" type="string">
-            <column name="contrase&#241;a" length="45" />
+        <property name="contrasena" type="string">
+            <column name="contrasena" length="45" />
         </property>
         <property name="activo" type="java.lang.Byte">
             <column name="activo" />
