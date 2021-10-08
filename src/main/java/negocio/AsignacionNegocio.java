@@ -17,7 +17,7 @@ import org.hibernate.Transaction;
  */
 public class AsignacionNegocio {
     
-    public void insert(Asignacion record){
+    public void insertAsignacion(Asignacion record){
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session ss = sf.openSession();
         Transaction tst = ss.beginTransaction();
