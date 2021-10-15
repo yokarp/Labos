@@ -8,7 +8,6 @@ package model;
  */
 public class Rol  implements java.io.Serializable {
 
-
      private int idRol;
      private String nombreRol;
      private int usuarioIdUsuario;

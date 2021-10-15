@@ -1,11 +1,11 @@
 model\AsignacionHasFormularioCovid.class
-model\HibernateUtil.class
 model\Rol.class
-model\Carrera.class
-model\Grupo.class
 model\Horario.class
 model\Usuario.class
-model\Laboratorio.class
 model\AsignacionHasFormularioCovidId.class
+model\HibernateUtil.class
+model\Carrera.class
+model\Grupo.class
+model\Laboratorio.class
 model\Asignacion.class
 model\FormularioCovid.class

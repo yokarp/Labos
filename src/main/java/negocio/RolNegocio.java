@@ -17,14 +17,34 @@ import org.hibernate.Transaction;
  */
 public class RolNegocio {
     
-    public void insertRol(Rol record){
-        SessionFactory sf = HibernateUtil.getSessionFactory();
-        Session ss = sf.openSession();
-        Transaction tst = ss.beginTransaction();
-        ss.save(record);
+    private SessionFactory sf = HibernateUtil.getSessionFactory();
+    private Session ss = sf.openSession();
+    private Transaction tst = ss.beginTransaction();
+
+    private void init() {
+        sf = HibernateUtil.getSessionFactory();
+        ss = sf.openSession();
+        tst = ss.beginTransaction();
+    }
+    
+    private void push(){
         ss.flush();
         tst.commit();
         ss.close();   
+    }
+    
+    public void insertRol(Rol record){
+        this.init();
+        ss.save(record);
+        this.push();
+    }
+    
+     public Rol findById(int id) {
+        this.init();
+        Rol rol = new Rol();
+        rol = (Rol) ss.get(Rol.class, id);
+        this.push();
+        return rol;
     }
     
 }
